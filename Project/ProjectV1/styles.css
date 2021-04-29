@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* Name: Saralyn Poole
+   Date: April 22, 2021 
+   Assignment: Project V1
+   Purpose: This is the style sheet for the NUWC Human History website.
+*/
+html {
+    background-color: rgb(35, 10,174);
+    background-color: hsl(249, 89%, 36%);
+    /*M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 Employing Progressive Enhancement): I have used both the HSL color value and the 
+    RGB value here so that older browsers as well as newer browsers can recognize and display the color.   */
+}
+
+header {
+    margin: 30px;
+    /*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that 
+    impact page elements rather than impacting text on the page): I have used CSS to set the margin for the header of the home page. */
+}
+
+body {
+    color: white; /*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS): 
+    I have applied an HSL color value and some basic colors that I may change in later versions. */
+    background-color: black;
+    font-family: 'Arial Black', 'Gadget', sans-serif;
+    font-size: large;
+}
+h1 {
+    color: white;
+    background-color:hsl(249, 89%, 36%);/*M2LO3 Demonstrate style precedence and inheritance in CSS 
+    (CSS, this item should be specified 2 times, once where precedence is applied and once
+    where inheritance is applied; see 2-3d Style Specificity and Precedence,
+    and 2-3e Style Inheritance): The h1 color style rule is more specific than the body style rule so it takes precedence.*/
+    font-family: 'Arial Black', 'Gadget', sans-serif;
+    font-size: large;
+}
+h2 p {
+    color: white;
+    background-color: black;
+    font-family: 'Arial Black', 'Gadget', sans-serif;
+    font-size: large;
+    text-align: center; /*M2LO13 Demonstrate how CSS can change presentation of textual elements 
+    (CSS, these are styles that impact text that is rendered on the page): I have used CSS to change the h2 text alignment to center.*/
+    /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual 
+    selectors as shown in Figure 2-12, Contextual Selectors, of the textbook): This demonstrates a parent descendant contextual selector, with h2 being the parent and p being the descendant. */
+}
+nav { 
+    color:cadetblue;
+    /*M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times, 
+    once where precedence is applied and once where inheritance is applied; 
+    see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance): The color style rule affects the nav element 
+    and passes to the list elements nested within it. This demonstrates style inheritance. */
+
+}
+h3 > * {
+    font-size:small;
+    color: ivory;
+    /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual 
+    selectors as shown in Figure 2-12, Contextual Selectors, of the textbook): I have used a wildcard selector to match any element inside h3.*/
+}
+a[href] {
+    color:cyan;
+    /*M2LO7 Demonstrate a CSS attribute selector other than class or id 
+    (CSS, specify 1 time, see 2-9b Attribute selectors): I used an elem[att] attribute selector here to select all hypertext elements
+    containing the href attribute.*/
+}
+
+p#V1 {
+    font-size: medium;
+    color:ivory;
+    /*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and 
+    a use of class, see 2-9b Attribute selectors): I have used a CSS id selector to set the font and color of the Project V1 paragraph located in my About Page.*/
+}
+
+ol.pageInfo {
+    font-size: medium;
+    /*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
+    show a use of id and a use of class, see 2-9b Attribute selectors): I have used a class selector to set the font size of the ordered list on my About Page. */
+}
+
+ol > :first-child {
+    font-size: large;
+    /*M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector 
+    (CSS, specify 2 times, show one pseudo-class and one pseudo-element, 
+    see 2-18 Using Pseudo-Classes and Pseudo-Elements): I have used the first-child pseduo-class to 
+    select the first child of unordered list parent element.*/
+}
+p::first-letter {
+    font-family:cursive;
+    font-size:large;
+    /*M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times, show one pseudo-class
+     and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements): I have used the first-letter pseudo-element selector to set the font
+     and size of the first letter of each paragraph.*/
+}
